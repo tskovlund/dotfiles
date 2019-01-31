@@ -1,0 +1,27 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Thomas Skovlund Hansen
+	email = thomasskovlundhansen@gmail.com
+[github]
+	name = Thomas Skovlund Hansen
+	email = thomasskovlundhansen@gmail.com
+	user = tskovlund
+[gitlab]
+	name = Thomas Skovlund Hansen
+	email = thomasskovlundhansen@gmail.com
+	user = tsh2910
+
+[core]
+	excludesfile = /Users/fuve/.gitignore
+	editor = vim
+[commit]
+	template = /Users/fuve/.stCommitMsg
+[alias]
+	fancylog = log --graph --oneline --decorate
+	flog = log --graph --oneline --decorate
+[color]
+	ui = true
+	interactive = true
+[pull]
+	rebase = true

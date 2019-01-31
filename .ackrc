@@ -1,0 +1,7 @@
+--type-set=markdown=.md,.mkd,.markdown
+
+--sort-files
+--color
+
+--ignore-dir=.idea
+--ignore-dir=node_modules
