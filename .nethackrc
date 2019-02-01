@@ -24,4 +24,11 @@ OPTIONS=hilite_status:condition/termill/red&inverse
 OPTIONS=hilite_status:condition/foodpois/red&inverse  
 OPTIONS=hilite_status:condition/slime/red&inverse      
 OPTIONS=hilite_status:characteristics/up/green/down/red
-OPTIONS=hilite_status: gold/up/yellow/down/brown
+OPTIONS=hilite_status:gold/up/yellow/down/brown
+
+OPTIONS=hilite_pet,hilite_pile
+
+OPTIONS=catname:Dyrmose,dogname:Horse,horsename:Horse
+
+OPTIONS=clicklook
+
