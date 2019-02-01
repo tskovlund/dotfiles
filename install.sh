@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+cd "$(dirname $0)"
+
 lns() {
     mkdir -p "$(dirname "$HOME/$1")"
     if [[ $(readlink "$HOME/$1") = "$PWD/$1" ]]; then
