@@ -13,6 +13,11 @@ alias ipy="ipython"
 alias ipy3="ipython"
 alias sml="rlwrap sml"
 
+alias brewall="echo '\$ brew update' && brew update &&
+    echo '\$ brew upgrade' && brew upgrade && 
+    echo '\$ brew cleanup' && brew cleanup &&
+    echo '\$ brew doctor' && brew doctor"
+
 latexmake() {
     latexmk -pdf $1
     latexmk -c
