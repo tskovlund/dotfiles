@@ -15,8 +15,6 @@
 [core]
 	excludesfile = /Users/fuve/.gitignore
 	editor = vim
-[commit]
-	template = /Users/fuve/.stCommitMsg
 [alias]
 	fancylog = log --graph --oneline --decorate
 	flog = log --graph --oneline --decorate

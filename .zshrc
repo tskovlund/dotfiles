@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/opt/sqlite/bin:$PATH
 export JAVA_HOME="`/usr/libexec/java_home -v 11`"
 
 # Path to your oh-my-zsh installation.
