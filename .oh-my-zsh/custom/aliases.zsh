@@ -30,7 +30,7 @@ gitall() {
     if [[ $1 == "" ]]; then
         git commit
     else
-        git commit -m
+        git commit -m $1
     fi
     git push
 }
