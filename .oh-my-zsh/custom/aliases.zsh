@@ -13,6 +13,8 @@ alias ipy="ipython"
 alias ipy3="ipython"
 alias sml="rlwrap sml"
 
+alias cd="cd -P"
+
 alias brewall="echo '\$ brew update' && brew update &&
     echo '\$ brew upgrade' && brew upgrade && 
     echo '\$ brew cleanup' && brew cleanup &&
