@@ -20,6 +20,10 @@ alias brewall="echo '\$ brew update' && brew update &&
     echo '\$ brew cleanup' && brew cleanup &&
     echo '\$ brew doctor' && brew doctor"
 
+alias vimall="vim -c ':PlugUpgrade' -c ':PlugUpdate'"
+
+alias all="brewall && vimall"
+
 latexmake() {
     latexmk -pdf $1
     latexmk -c
