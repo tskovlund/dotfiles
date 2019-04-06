@@ -1,6 +1,4 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = Thomas Skovlund Hansen
 	email = thomasskovlundhansen@gmail.com
 [github]
@@ -11,7 +9,10 @@
 	name = Thomas Skovlund Hansen
 	email = thomasskovlundhansen@gmail.com
 	user = tsh2910
-
+[bitbucket]
+    name = Thomas Skovlund Hansen
+    email = tsk@it-minds.dk
+    user = tskovlund
 [core]
 	excludesfile = /Users/fuve/.gitignore
 	editor = vim
