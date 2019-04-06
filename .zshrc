@@ -110,3 +110,5 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # 
 # Aliases can be found in ~/.oh-my-zsh/custom/aliases.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
