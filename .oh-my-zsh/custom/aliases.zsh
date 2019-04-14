@@ -17,6 +17,7 @@ alias cd="cd -P"
 
 alias brewall="echo '\$ brew update' && brew update &&
     echo '\$ brew upgrade' && brew upgrade && 
+    echo '\$ brew cask upgrade' && brew cask upgrade &&
     echo '\$ brew cleanup' && brew cleanup &&
     echo '\$ brew doctor' && brew doctor"
 
