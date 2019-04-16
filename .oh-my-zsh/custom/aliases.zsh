@@ -12,6 +12,7 @@ alias py3="python3"
 alias ipy="ipython"
 alias ipy3="ipython"
 alias sml="rlwrap sml"
+alias js="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
 alias cd="cd -P"
 
