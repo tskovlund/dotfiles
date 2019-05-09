@@ -86,6 +86,24 @@ set noshowmode
 " Map fzf to ;
 map ; :Files<CR>
 
+" Markdown in Goyo mode
+function! s:auto_goyo()
+  if &ft == 'markdown'
+    Goyo 80
+  elseif &ft == 'pandoc'
+    Goyo 80
+  elseif exists('#goyo')
+    let bufnr = bufnr('%')
+    Goyo!
+    execute 'b '.bufnr
+  endif
+endfunction
+
+augroup goyo_markdown
+  autocmd!
+  autocmd BufNewFile,BufRead * call s:auto_goyo()
+augroup END
+
 """""""""""""""""""""""""""""""""""""
 " User interface
 """""""""""""""""""""""""""""""""""""
