@@ -59,6 +59,13 @@ Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+" Distraction free vim
+Plug 'junegunn/goyo.vim'
+
+" Markdown support
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax' 
+
 " Initialize plugin system
 call plug#end()
 
