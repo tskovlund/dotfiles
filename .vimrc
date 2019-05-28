@@ -52,6 +52,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' }
 " latex-suite
 Plug 'vim-latex/vim-latex'
 
+" vue highlighting
+Plug 'posva/vim-vue'
+
 " lightline
 Plug 'itchyny/lightline.vim'
 
@@ -65,6 +68,9 @@ Plug 'junegunn/goyo.vim'
 " Markdown support
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax' 
+
+" Track coding time
+Plug 'wakatime/vim-wakatime'
 
 " Initialize plugin system
 call plug#end()
