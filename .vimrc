@@ -90,7 +90,7 @@ set laststatus=2
 set noshowmode
 
 " Map fzf to ;
-map ; :Files<CR>
+map <Up> :Files<CR>
 
 " Markdown in Goyo mode
 function! s:auto_goyo()
@@ -166,9 +166,12 @@ set mouse=a
 set so=5
 
 " Smart way to move between windows
+let g:C_Ctrl_j = 'off'
+let g:BASH_Ctrl_j = 'off'
+
+map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
-map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Return to last edit position when opening files (You want this!)
@@ -243,6 +246,12 @@ set hlsearch
 set incsearch
 " Map , to remove highlighting
 nnoremap , :noh<CR>
+
+"""""""""""""""""""""""""""""""""""""
+" Shortcuts
+"""""""""""""""""""""""""""""""""""""
+au FileType python nnoremap <LEADER>r O<C-A> = <Esc>p
+au FileType tex nnoremap <LEADER>r O\newcommand{<C-A>}{<Esc>pA}<Esc>
 
 """""""""""""""""""""""""""""""""""""
 " Clipboard
