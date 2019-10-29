@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/sqlite/bin:$PATH
-export JAVA_HOME="`/usr/libexec/java_home -v 12`"
+export JAVA_HOME="`/usr/libexec/java_home -v 13`"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
