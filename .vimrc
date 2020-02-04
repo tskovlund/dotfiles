@@ -129,6 +129,9 @@ set wildmenu
 " Enable syntax highlighting
 syntax enable
 
+" Custom filetype highligthing definitions
+autocmd BufNewFile,BufRead *.svelte set syntax=html
+
 " Show matching brackets when text indicator is over them
 set showmatch
 
