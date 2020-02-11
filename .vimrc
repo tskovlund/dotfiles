@@ -72,6 +72,9 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 " Track coding time
 Plug 'wakatime/vim-wakatime'
 
+" Black -- Python auto formatting
+Plug 'psf/black'
+
 " Initialize plugin system
 call plug#end()
 
@@ -158,6 +161,7 @@ set wildignore+=*.~,*.swp,*.o,*.pyc,*.class,*.DS_Store
 " Performance setting - don't redraw while executing macros
 set lazyredraw
 
+
 """""""""""""""""""""""""""""""""""""
 " Navigation
 """""""""""""""""""""""""""""""""""""
@@ -195,7 +199,8 @@ set tabstop=4
 set softtabstop=4
 " Number of spaces when auto indenting
 set shiftwidth=4
-
+" Round indent to a multiple of 'shiftwidth'
+set shiftround
 " Match indentation of previous line
 set autoindent
 
@@ -233,6 +238,9 @@ endif
 set undodir=~/.vim/undo-dir
 set undofile
 
+" Auto format python code when saving or by pressing <Leader>f
+autocmd BufWritePre *.py execute ':Black'
+nnoremap <Leader>f :Black<CR>
 """""""""""""""""""""""""""""""""""""
 " Searching
 """""""""""""""""""""""""""""""""""""
