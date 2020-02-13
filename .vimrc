@@ -122,8 +122,10 @@ let g:ale_sign_warning = '⚠️'
 
 " Change mapleader to space
 let mapleader="\<Space>"
-" Map :ALEFix to a shortcut
-nmap <leader>f :ALEFix<CR>
+" Map :ALEFix to shortcuts
+nmap <leader>ff :ALEFix<CR>
+nmap <leader>fj :ALENextWrap<CR>
+nmap <leader>fk :ALEPreviousWrap<CR>
 """""""""""""""""""""""""""""""""""""
 " User interface
 """""""""""""""""""""""""""""""""""""
