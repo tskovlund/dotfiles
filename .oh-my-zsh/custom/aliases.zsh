@@ -5,6 +5,7 @@ alias vimconfig="vim ~/.vimrc"
 alias kattisconfig="vim ~/.kattisrc"
 alias ackconfig="vim ~/.ackrc"
 
+alias ls="ls -FG"
 # Binaries
 alias py="python3"
 alias py2="python"
