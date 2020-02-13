@@ -72,8 +72,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 " Track coding time
 Plug 'wakatime/vim-wakatime'
 
-" Black -- Python auto formatting
-Plug 'psf/black'
+" Ale formatting
+Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -113,6 +113,17 @@ augroup goyo_markdown
   autocmd BufNewFile,BufRead * call s:auto_goyo()
 augroup END
 
+
+" Set Ale to fix files when you save them.
+let g:ale_fix_on_save = 1
+" Pimp the linter symbols
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+" Change mapleader to space
+let mapleader="\<Space>"
+" Map :ALEFix to a shortcut
+nmap <leader>f :ALEFix<CR>
 """""""""""""""""""""""""""""""""""""
 " User interface
 """""""""""""""""""""""""""""""""""""
@@ -188,8 +199,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Editing
 """""""""""""""""""""""""""""""""""""
 
-" Change mapleader to space
-let mapleader="\<Space>"
 
 " Tabs are spaces
 set expandtab
@@ -238,9 +247,6 @@ endif
 set undodir=~/.vim/undo-dir
 set undofile
 
-" Auto format python code when saving or by pressing <Leader>f
-autocmd BufWritePre *.py execute ':Black'
-nnoremap <Leader>f :Black<CR>
 """""""""""""""""""""""""""""""""""""
 " Searching
 """""""""""""""""""""""""""""""""""""
