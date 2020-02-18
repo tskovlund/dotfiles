@@ -114,11 +114,12 @@ augroup goyo_markdown
 augroup END
 
 
-" Set Ale to fix files when you save them.
-let g:ale_fix_on_save = 1
+" Set ALE to fix files when you save them.
+" let g:ale_fix_on_save = 1
+
 " Pimp the linter symbols
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
+" let g:ale_sign_error = '❌'
+" let g:ale_sign_warning = '⚠️'
 
 " Change mapleader to space
 let mapleader="\<Space>"
