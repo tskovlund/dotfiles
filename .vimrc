@@ -47,7 +47,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 
 " autocompletion
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --all' }
 
 " latex-suite
 Plug 'vim-latex/vim-latex'
