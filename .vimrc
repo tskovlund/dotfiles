@@ -268,10 +268,11 @@ set incsearch
 nnoremap , :noh<CR>
 
 """""""""""""""""""""""""""""""""""""
-" Shortcuts
+" Filetype specific configuration
 """""""""""""""""""""""""""""""""""""
 au FileType python nnoremap <LEADER>r O<C-A> = <Esc>p
 au FileType tex nnoremap <LEADER>r O\newcommand{<C-A>}{<Esc>pA}<Esc>
+au! BufNewFile,BufRead *.svelte set ft=html
 
 """""""""""""""""""""""""""""""""""""
 " Clipboard
