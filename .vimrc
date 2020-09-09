@@ -7,7 +7,7 @@
 "     https://github.com/amix/vimrc
 "
 " Version:
-"     2018-01-29
+"     2020-09-09
 "
 " Sections:
 "     General settings
@@ -52,22 +52,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --all' }
 " latex-suite
 Plug 'vim-latex/vim-latex'
 
-" vue highlighting
-Plug 'posva/vim-vue'
-
 " lightline
 Plug 'itchyny/lightline.vim'
-
-" fzf fuzzy find
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-
-" Distraction free vim
-Plug 'junegunn/goyo.vim'
-
-" Markdown support
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax' 
 
 " Track coding time
 Plug 'wakatime/vim-wakatime'
@@ -92,28 +78,6 @@ set laststatus=2
 " Don't show status anywhere else but in the powerline
 set noshowmode
 
-" Map fzf to ;
-map <Up> :Files<CR>
-
-" Markdown in Goyo mode
-function! s:auto_goyo()
-  if &ft == 'markdown'
-    Goyo 80
-  elseif &ft == 'pandoc'
-    Goyo 80
-  elseif exists('#goyo')
-    let bufnr = bufnr('%')
-    Goyo!
-    execute 'b '.bufnr
-  endif
-endfunction
-
-augroup goyo_markdown
-  autocmd!
-  autocmd BufNewFile,BufRead * call s:auto_goyo()
-augroup END
-
-
 " Set ALE to fix files when you save them.
 " let g:ale_fix_on_save = 1
 
@@ -127,6 +91,7 @@ let mapleader="\<Space>"
 nmap <leader>ff :ALEFix<CR>
 nmap <leader>fj :ALENextWrap<CR>
 nmap <leader>fk :ALEPreviousWrap<CR>
+
 """""""""""""""""""""""""""""""""""""
 " User interface
 """""""""""""""""""""""""""""""""""""
@@ -145,9 +110,6 @@ set wildmenu
 
 " Enable syntax highlighting
 syntax enable
-
-" Custom filetype highligthing definitions
-autocmd BufNewFile,BufRead *.svelte set syntax=html
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -172,9 +134,9 @@ set t_vb=
 
 " Ignore various files
 set wildignore+=*.~,*.swp,*.o,*.pyc,*.class,*.DS_Store
+
 " Performance setting - don't redraw while executing macros
 set lazyredraw
-
 
 """""""""""""""""""""""""""""""""""""
 " Navigation
@@ -202,7 +164,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Editing
 """""""""""""""""""""""""""""""""""""
 
-
 " Tabs are spaces
 set expandtab
 " Number of visual spaces per TAB
@@ -228,10 +189,6 @@ filetype plugin indent on
 
 " Don't auto-wrap comments on new lines
 autocmd FileType * setlocal formatoptions-=cro
-
-" Linebreak on 79 characters (PEP 8 compliant)
-set linebreak
-set textwidth=79
 
 " Allow backspacing over autoindents, line ends and over start of insert
 set backspace=indent,eol,start    
@@ -272,11 +229,11 @@ nnoremap , :noh<CR>
 """""""""""""""""""""""""""""""""""""
 au FileType python nnoremap <LEADER>r O<C-A> = <Esc>p
 au FileType tex nnoremap <LEADER>r O\newcommand{<C-A>}{<Esc>pA}<Esc>
-au! BufNewFile,BufRead *.svelte set ft=html
 
 """""""""""""""""""""""""""""""""""""
 " Clipboard
 """""""""""""""""""""""""""""""""""""
 
 " Use the system clipboard
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
+
