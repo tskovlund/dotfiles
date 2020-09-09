@@ -142,6 +142,8 @@ set lazyredraw
 " Navigation
 """""""""""""""""""""""""""""""""""""
 
+set ttimeoutlen=50
+
 " Enable mouse
 set mouse=a
 
