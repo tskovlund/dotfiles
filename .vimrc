@@ -7,7 +7,7 @@
 "     https://github.com/amix/vimrc
 "
 " Version:
-"     2020-09-09
+"     2020-09-10
 "
 " Sections:
 "     General settings
