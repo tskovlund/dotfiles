@@ -1,5 +1,7 @@
 # Configuration
 alias vimconfig="vim ~/.vimrc"
+alias zshconfig="vim ~/.zshrc"
+alias zshalias="vim ~/.oh-my-zsh/custom/aliases.zsh"
 
 # Binaries
 alias python="python3"
