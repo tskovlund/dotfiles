@@ -5,16 +5,7 @@
 	name = Thomas Skovlund Hansen
 	email = thomasskovlundhansen@gmail.com
 	user = tskovlund
-[gitlab]
-	name = Thomas Skovlund Hansen
-	email = thomasskovlundhansen@gmail.com
-	user = tsh2910
-[bitbucket]
-    name = Thomas Skovlund Hansen
-    email = tsk@it-minds.dk
-    user = tskovlund
 [core]
-	excludesfile = /Users/fuve/.gitignore
 	editor = vim
 [alias]
 	fancylog = log --graph --oneline --decorate
