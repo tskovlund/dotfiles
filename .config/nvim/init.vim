@@ -161,15 +161,6 @@ set mouse=a
 " Set 5 lines of scrolloff when moving vertically with j/k
 set so=5
 
-" Smart way to move between windows
-let g:C_Ctrl_j = 'off'
-let g:BASH_Ctrl_j = 'off'
-
-map <C-h> <C-W>h
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-l> <C-W>l
-
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
