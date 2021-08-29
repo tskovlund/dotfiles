@@ -69,6 +69,9 @@ Plug 'wakatime/vim-wakatime'
 " Ale formatting
 Plug 'dense-analysis/ale'
 
+" Coq
+Plug 'whonore/Coqtail'
+
 " Initialize plugin system
 call plug#end()
 
@@ -208,13 +211,16 @@ set whichwrap+=<,>,h,l,[,]
 
 " Turn persistent undo on
 " means that you can undo even when you close a buffer/VIM
-if !isdirectory($HOME."/.vim")
-    call mkdir($HOME."/.vim", "", 0770)
+if !isdirectory($HOME."/.config")
+    call mkdir($HOME."/.config", "", 0770)
 endif
-if !isdirectory($HOME."/.vim/undo-dir")
-    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+if !isdirectory($HOME."/.config/nvim")
+    call mkdir($HOME."/.config/nvim", "", 0700)
 endif
-set undodir=~/.vim/undo-dir
+if !isdirectory($HOME."/.config/nvim/undo-dir")
+    call mkdir($HOME."/.config/nvim/undo-dir", "", 0700)
+endif
+set undodir=~/.config/nvim/undo-dir
 set undofile
 
 """""""""""""""""""""""""""""""""""""

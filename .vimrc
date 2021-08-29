@@ -69,6 +69,9 @@ Plug 'wakatime/vim-wakatime'
 " Ale formatting
 Plug 'dense-analysis/ale'
 
+" Coq
+Plug 'whonore/Coqtail'
+
 " Initialize plugin system
 call plug#end()
 
