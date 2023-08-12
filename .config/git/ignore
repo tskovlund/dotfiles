@@ -1,3 +1,6 @@
+.DS_Store
+__pycache__
+*.autosave.ipe
 
 # Created by https://www.toptal.com/developers/gitignore/api/latex,vim,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex,vim,visualstudiocode
@@ -16,6 +19,7 @@
 *.cb
 *.cb2
 .*.lb
+*.mtc
 
 ## Intermediate documents:
 *.dvi
