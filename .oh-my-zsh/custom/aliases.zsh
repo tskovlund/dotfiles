@@ -11,4 +11,4 @@ alias py3="python3"
 # Tasks
 alias vimall="vim -c ':PlugUpgrade' -c ':PlugUpdate'"
 alias nvimall="nvim -c ':PlugUpgrade' -c ':PlugUpdate'"
-
+alias latexclean="rm -f *.aux *.fdb_latexmk *.fls *.log *.out *.synctex.gz *.toc *.bbl *.blg"
