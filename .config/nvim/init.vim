@@ -54,8 +54,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 
 " autocompletion
-let ycm_clangd_binary_path='/usr/bin/clangd'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --all --system-libclang' }
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --all' }
+" Use homebrew's clangd
+let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
 
 " latex-suite
 Plug 'vim-latex/vim-latex'
